@@ -1,4 +1,5 @@
-public class NoteBook {
+public class NoteBook extends Product{
+    private static int noteBookIds = 1;
     private int pagecount;
     private boolean isHardCover;
     // setters and getters
@@ -15,5 +16,13 @@ public class NoteBook {
         return isHardCover;
     }
     //methods
-
+    public String toString(){
+        return ("title" + this.title +"price" + this.price +"pagecount : " + this.pagecount + ", isHardCover : " + this.isHardCover);
+    }
+    @Override
+    protected String generateId(){
+        int thisId = 2000 + noteBookIds;
+        noteBookIds++;
+        return Integer.toString(thisId);
+    }
 }
