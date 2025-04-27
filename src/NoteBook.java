@@ -2,6 +2,13 @@ public class NoteBook extends Product{
     private static int noteBookIds = 1;
     private int pagecount;
     private boolean isHardCover;
+    //constructor
+    public NoteBook(String title, double price, boolean isHardCover , int pagecount){
+        super(title, price);
+        this.isHardCover = isHardCover;
+        this.pagecount = pagecount;
+
+    }
     // setters and getters
     public void setPagecount(int pagecount) {
         this.pagecount = pagecount;
