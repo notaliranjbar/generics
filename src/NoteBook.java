@@ -24,7 +24,7 @@ public class NoteBook extends Product{
     }
     //methods
     public String toString(){
-        return ("title" + this.title +"price" + this.price +"pagecount : " + this.pagecount + ", isHardCover : " + this.isHardCover);
+        return ("title" + this.getTitle() +"price" + this.getPrice() +"pagecount : " + this.pagecount + ", isHardCover : " + this.isHardCover);
     }
     @Override
     protected String generateId(){
