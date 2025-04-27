@@ -2,6 +2,14 @@ public class Book extends Product{
     private String author;
     private String publication;
     private String genre;
+    //constructor
+    public Book(String title, double price) {
+        super(title, price);
+        this.author = author;
+        this.publication = publication;
+        this.genre = genre;
+    }
+
     //setters and getters
     public void setAuthor(String author) {
         this.author = author;
@@ -20,6 +28,10 @@ public class Book extends Product{
     }
     public String getGenre() {
         return genre;
+    }
+    @Override
+    protected void generateId(){
+
     }
 
 }
