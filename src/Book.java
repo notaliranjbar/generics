@@ -1,9 +1,10 @@
 public class Book extends Product{
+    private static int bookIds = 1;
     private String author;
     private String publication;
     private String genre;
     //constructor
-    public Book(String title, double price) {
+    public Book(String title , double price ,String author , String publication , String genre) {
         super(title, price);
         this.author = author;
         this.publication = publication;
@@ -29,9 +30,15 @@ public class Book extends Product{
     public String getGenre() {
         return genre;
     }
+    //methods
     @Override
-    protected void generateId(){
-
+    protected String generateId(){
+        int thisId = 1000 + bookIds;
+        return Integer.toString(thisId);
+        bookIds ++;
+    }
+    public String toString(){
+        return ("title : " + this.getTitle() + ", price : " + this.getPrice() + ", author : " + this.getAuthor() + ", genre : " + this.getGenre());
     }
 
 }

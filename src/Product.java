@@ -23,10 +23,9 @@ public abstract class Product {
     public Product(String title, double price){
         this.title = title;
         this.price = price;
-        this.generateId();
-
+        this.Id = generateId();
     }
-    protected abstract void generateId();
+    protected abstract String generateId();
 
 
 }
