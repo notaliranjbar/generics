@@ -1,4 +1,4 @@
-public class Product {
+public abstract class Product {
     private String title;
     private double price;
     private String Id;
@@ -19,5 +19,14 @@ public class Product {
     public String getTitle() {
         return title;
     }
+    //constructor
+    public Product(String title, double price){
+        this.title = title;
+        this.price = price;
+        this.generateId();
+
+    }
+    protected abstract void generateId();
+
 
 }
