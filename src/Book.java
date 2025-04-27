@@ -34,8 +34,8 @@ public class Book extends Product{
     @Override
     protected String generateId(){
         int thisId = 1000 + bookIds;
+        bookIds++;
         return Integer.toString(thisId);
-        bookIds ++;
     }
     public String toString(){
         return ("title : " + this.getTitle() + ", price : " + this.getPrice() + ", author : " + this.getAuthor() + ", genre : " + this.getGenre());
