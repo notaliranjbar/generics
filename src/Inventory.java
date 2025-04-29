@@ -13,5 +13,8 @@ public class Inventory<T extends Product> {
         }
 
     }
+    public void addItem(T product){
+        products.add(product);
+    }
 
 }
