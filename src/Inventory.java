@@ -31,6 +31,11 @@ public class Inventory<T extends Product> {
         }
         return null;
     }
+    public void displayAll(){
+        for (T product : products){
+            System.out.println(product.toString());
+        }
+    }
 
 
 
