@@ -3,6 +3,13 @@ import java.util.ArrayList;
 public class Inventory<T extends Product> {
     private ArrayList<T> products;
     //setters and getters
+    public ArrayList<Double> getProdctsPrices(){
+        ArrayList<Double> prices = new ArrayList<>();
+        for(T product : products){
+            prices.add(product.getPrice());
+        }
+        return prices;
+    }
 
     //methods
     public void applyDiscount(String productName , int discount){
