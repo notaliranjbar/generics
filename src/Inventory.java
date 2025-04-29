@@ -16,5 +16,13 @@ public class Inventory<T extends Product> {
     public void addItem(T product){
         products.add(product);
     }
+    public void removeItemById(int id){
+        for (T product : products){
+            if(product.getId().equals(id)){
+                products.remove(product);
+            }
+        }
+    }
+
 
 }
