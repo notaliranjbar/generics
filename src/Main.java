@@ -9,6 +9,12 @@ public class Main{
         NoteBook noteBook1 = new NoteBook("djls" , 12 , true , 100);
         NoteBook noteBook2 = new NoteBook("djls" , 15 , false , 200);
         Accessory bracelet = new Accessory("gucci bracelet" , 20934 , "gold");
+        inventory1.addItem(bracelet);
+        inventory1.addItem(noteBook1);
+        inventory2.addItem(noteBook2);
+        inventory2.addItem(book1);
+        inventory3.addItem(bracelet);
+        inventory3.addItem(book1);
 
 
 
