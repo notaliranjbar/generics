@@ -23,6 +23,15 @@ public class Inventory<T extends Product> {
             }
         }
     }
+    public T findItemById(int id){
+        for (T product : products){
+            if(product.getId().equals(id)){
+                return product;
+            }
+        }
+        return null;
+    }
+
 
 
 }
